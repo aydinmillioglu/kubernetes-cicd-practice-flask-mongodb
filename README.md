@@ -4,6 +4,8 @@ This repository is a simple example of a Python Flask application functioning as
 
 This repository is built on top of [rianrajagede/flask-mongodb](https://github.com/rianrajagede/flask-mongodb).
 
+Host info of the db is left dynamic and set via env variables. It allows us to change the environments like test, prp or prod. By this way, env changes does not require rebuild. 
+
 ## Table of Contents
 
 1. [Docker Compose Installation](#docker-compose-installation)
@@ -80,5 +82,5 @@ CI/CD Pipeline:
 
 3. Create a new pipeline job named "task-manager" and configure it as follows:
    - Choose "Pipeline script from SCM"
-   - Add the project URL: [https://github.com/aydinmillioglu/kubernetes-cicd-practice-flask-mongodb.git](https://github.com/aydinmillioglu/kubernetes-cicd-practice-flask-mongodb.git)
+   - Add your project URL: [https://github.com/aydinmillioglu/kubernetes-cicd-practice-flask-mongodb.git](https://github.com/aydinmillioglu/kubernetes-cicd-practice-flask-mongodb.git)
    - Use GitHub credentials that we added.
