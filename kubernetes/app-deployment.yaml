@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  namespace: taskmanager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+        - name: app
+          image: aydinmillioglu/flask-taskmanager:3.0
+          ports:
+            - containerPort: 5000
+          env:
+            - name: host
+              value: "mongo-service.taskmanager.svc.cluster.local"

@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    environment:
+      - host
+    command: python run.py
+    container_name: app
+    ports:
+      - "5002:5000"
+    links:
+      - db
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    hostname: mongo
+    container_name: mongo
